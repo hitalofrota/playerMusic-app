@@ -16,4 +16,4 @@ export const getSongs = async () => {
 
 export const getSongUrl = (song) => {
   return `${API_URL}/play/${song}`;
-};
+}
