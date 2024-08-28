@@ -1,0 +1,47 @@
+.playerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5; /* Fundo neutro */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 20px;
+    width: 100%; /* Preenche toda a largura disponível */
+    max-width: 600px; /* Limite máximo de largura para telas maiores */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box; /* Inclui padding e border no width */
+}
+
+.playerContainer p {
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Texto escuro */
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    overflow-wrap: break-word; /* Garante que o texto não quebre o layout */
+}
+
+.playerContainer button {
+    background-color: #333;
+    color: #f5f5f5; /* Botão com fundo escuro e texto claro */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    margin-top: 10px;
+    width: 100%; /* Botão preenche toda a largura */
+    max-width: 200px; /* Limite máximo de largura para o botão */
+}
+
+.playerContainer button:hover {
+    background-color: #555; /* Escurece um pouco ao passar o mouse */
+}

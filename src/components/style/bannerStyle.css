@@ -1,0 +1,17 @@
+.banner-box{
+    width: 240px;
+    height: 180px;
+    margin: 10px;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ccc; 
+    margin: 20px 0; 
+    width: 100%; 
+  }
+
+.banner-image{
+    border-radius: 50px !important; 
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,45 @@
+.musicTitle {
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.letterStyles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f5f5f5; /* Cor de fundo neutra e clara */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para um efeito de elevação */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Texto escuro e minimalista */
+}
+
+.letterStyles:hover {
+    transform: scale(1.02); /* Leve aumento ao passar o mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra mais profunda ao passar o mouse */
+}
+
+.letterStyles span {
+    font-size: 16px;
+    font-weight: 500; /* Peso médio para o texto */
+}
+
+.letterStyles button {
+    background-color: #333;
+    color: #f5f5f5; /* Cores neutras para o botão */
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.letterStyles button:hover {
+    background-color: #555; /* Escurece um pouco ao passar o mouse */
+    color: #f5f5f5;
+}
