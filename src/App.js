@@ -4,9 +4,8 @@ import { getSongs, getSongUrl } from './services/api';
 import ProfileClient from './components/ProfileClient';
 import HFProduction from './components/HFProduction';
 import LogoPricipal from './components/LogoPrincipal';
-import SongList from './components/SongList';
-import Player from './components/Player';
 import BannerBox from './components/BannerBox';
+import MusicApp from './components/MusicApp';
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -38,16 +37,6 @@ function App() {
     loadSongs();
   }, []);
 
-  const handlePlay = (song) => {
-    setCurrentSong(song);
-    setSongUrl(getSongUrl(song));
-  };
-
-  const handleStop = () => {
-    setCurrentSong(null);
-    setSongUrl('');
-  };
-
   return (
     <div className="App">
       <HFProduction />
@@ -58,8 +47,7 @@ function App() {
         <BannerBox banners={banners2} />
         <BannerBox banners={banners3} />
       </div>
-      <SongList songs={songs} onPlay={handlePlay} />
-      <Player songUrl={songUrl} currentSong={currentSong} onStop={handleStop} />
+      <MusicApp songs={songs} />
     </div>
   );
 }

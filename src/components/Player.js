@@ -1,33 +1,29 @@
 import React, { useEffect, useRef } from 'react';
-import './style/player.css'; // Lembre-se de criar e importar o arquivo CSS
 
-function Player({ songUrl, currentSong, onStop, onNext }) {
-  const audioRef = useRef(new Audio());
+function Player({ song }) {
+  const audioRef = useRef(null);
 
   useEffect(() => {
-    if (currentSong) {
-      audioRef.current.src = songUrl;
-      audioRef.current.play();
-      audioRef.current.addEventListener('ended', handleSongEnd);
+    if (song && audioRef.current) {
+      audioRef.current.src = song.url;
+      audioRef.current.play().catch(error => {
+        console.error("Failed to play the audio: ", error);
+      });
     }
 
     return () => {
-      audioRef.current.pause();
-      audioRef.current.removeEventListener('ended', handleSongEnd);
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.src = ''; // Limpa o src quando a música parar
+      }
     };
-  }, [songUrl, currentSong]);
-
-  const handleSongEnd = () => {
-    if (onNext) {
-      onNext();
-    }
-  };
+  }, [song]);
 
   return (
-    currentSong && (
+    song && (
       <div className="playerContainer">
-        <p>Playing: {currentSong}</p>
-        <button onClick={onStop}>Stop</button>
+        <p>Playing: {song.name}</p>
+        <audio ref={audioRef} controls autoPlay />
       </div>
     )
   );
