@@ -9,8 +9,8 @@ function SongList({ songs, onPlay }) {
       </div>
       {songs.map((song, index) => (
         <div key={index} className='letterStyles'>
-          <span>{song}</span>
-          <button onClick={() => onPlay(song)}>Play</button>
+          <span>{song.name}</span>
+          <button onClick={() => onPlay(song)}>Play</button> {/* Passando o objeto song */}
         </div>
       ))}
     </div>
