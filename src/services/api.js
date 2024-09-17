@@ -6,7 +6,7 @@ console.log('API_URL:', API_URL);
 export const getSongs = async () => {
     try {
       const response = await axios.get(`${API_URL}/songs`);
-      return Array.isArray(response.data) ? response.data : [];
+      return Array.isArray(response.data.songs) ? response.data.songs : [];
     } catch (error) {
       console.error('Erro ao carregar músicas:', error);
       return [];
